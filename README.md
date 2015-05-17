@@ -2,11 +2,11 @@
 
 ### Hour One
 - Basic Unix. Counting tabulated data in Unix.
-- *Lesson based on British Library Digital Scholarship Training Programming, 119 Programming in Libraries **need to check flags across Unix/Windows/OSX*
+- *Lesson based on British Library Digital Scholarship Training Programming, [119 Programming in Libraries](https://github.com/LibraryCarpentry/week-two-library-carpentry/blob/master/2015-03-03_119-course.md) **need to check flags across Unix/Windows/OSX*
 
 ### Hour Two
 - Mining tabulated data in Unix. Ripping a text apart in Unix
-- *Lesson based on British Library Digital Scholarship Training Programming, 119 Programming in Libraries **need to pick a new text for part two***
+- *Lesson based on British Library Digital Scholarship Training Programming, [119 Programming in Libraries](https://github.com/LibraryCarpentry/week-two-library-carpentry/blob/master/2015-03-03_119-course.md) **need to pick a new text for part two***
 
 ### Hour Three
 - Finishing Ripping a text apart in Unix.
