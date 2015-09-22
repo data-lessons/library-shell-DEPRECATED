@@ -197,7 +197,7 @@ So far we have counted strings in file and printed to the shell or to file those
 
 However if we look at this file, it contains every instance of the string 'revolution' including as a single word and as part of other words such as 'revolutionary'. This perhaps isn't as useful as we thought... Thankfully, the `-w` flag instructs `grep` to look for whole words only, giving us greater precision in our search. Type `grep -iw revolution *.tsv > results/DATE_JAiw-revolution.tsv` and hit enter. This script looks in both of the defined files and exports any lines containing the whole word `revolution` (without regard to case) to the specified .tsv file. `wc -l *revolution` shows us the difference between them.
 
-Finally, you can use regular expression syntax (covered in detail in course 118 Cleaning up Data) to search for similar words. In `gallic.txt` we have the string `fr[ae]nc[eh]`. The square brackets here ask the machine to match any character in the range specified. So when used with grep as `grep -iw --file=gallic.txt *.tsv` the shell will print out each line containing the string:
+Finally, you can use regular expression syntax (covered [last week!](https://github.com/LibraryCarpentry/week-one-library-carpentry/blob/master/lesson-materials/2015-08-13_LibCarp-lesson-one.md)) to search for similar words. In `gallic.txt` we have the string `fr[ae]nc[eh]`. The square brackets here ask the machine to match any character in the range specified. So when used with grep as `grep -iw --file=gallic.txt *.tsv` the shell will print out each line containing the string:
 
 - france
 - french
