@@ -227,15 +227,15 @@ Count all case insensitive instances of that word in the 'America' and 'Africa' 
 
 Search for all case insensitive instances of that word in the 'America' and 'Africa' tsv files in this directory. Print you results to a new .tsv file. 
 
-`grep -i hero 2014-01-31* > new.tsv`
+- `grep -i hero 2014-01-31* > new.tsv`
 
 Search for all case insensitive instances of that whole word in the 'America' and 'Africa' tsv files in this directory. Print you results to a new .tsv file.
 
-grep -iw hero 2014-01-31* > new2.tsv`
+- `grep -iw hero 2014-01-31* > new2.tsv`
 
 Compare the line counts of the last two files.
 
-- wc -l FILENAMES
+- `wc -l FILENAMES`
 
 Open both files in Notepad++ to see the difference between searching strings and searching whole words using `grep`
 
