@@ -1,4 +1,4 @@
-#Library Carpentry Week Two: Shell
+#Library Carpentry Week Two: Controlling Data (with the Shell)
 
 1730-2030, Monday 16 November, City University London
 
