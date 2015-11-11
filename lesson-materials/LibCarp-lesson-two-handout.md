@@ -16,12 +16,10 @@ _____
 
 **`ls`** list directory
 
-- `-l`:	list file information
-- `-lh`:	list human reasable file information
+- `-l`: list file information
+- `-lh`: list human readable file information
 
 **`cd`** change directory
-
-**`explorer .`** open directory in graphical user interface (GUI)
 
 ______
 ### Basics - interacting with files
@@ -34,17 +32,11 @@ ______
 
 **`tail`** output last parts of a file or files
 
-**`mv`** rename or move a file or files
+**`mv`** rename or move a file or files. Syntax for renaming a file: `mv FILENAME NEWFILENAME`
 
-- syntax for renaming a file: `mv FILENAME NEWFILENAME`
+**`cp`** copy a file or files. Syntax: `cp FILENAME NEWFILENAME`
 
-**`cp`** copy a file or files
-
-- syntax: `cp FILENAME NEWFILENAME`
-
-**`>`** redirect output
-
-- syntax with `cat`: `cat FILENAME1 FILENAME2 > NEWFILENAME`
+**`>`** redirect output. Syntax with `cat`: `cat FILENAME1 FILENAME2 > NEWFILENAME`
 
 **`rm`** remove a file or files. NB: *USE WITH CAUTION!!!*
 
@@ -59,10 +51,10 @@ ______
 
 *Examples*
 
-- `foobar?`: matches six character filenames starting with `foobar`
-- `foobar*`: matches all filenames starting with `foobar`
-- `foobar*.txt`: matches all filenames starting with `foobar` and ending with `.txt`
-- `[1-9]foobar?`: matches seven character filenames starting that start with a number, have `foobar` after the number, and end with any character or number.
+- `foobar?`: matches seven character strings starting with `foobar` and ending with one character or number
+- `foobar*`: matches strings starting with `foobar` ending with zero or more further characters or numbers
+- `foobar*.txt`: matches strings starting with `foobar` and ending with `.txt`
+- `[1-9]foobar?`: matches eight character strings starting that start with a number, have `foobar` after the number, and end with any character or number.
 
 _____
 ### Counting and Mining
