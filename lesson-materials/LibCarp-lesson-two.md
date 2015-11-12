@@ -38,7 +38,7 @@ ______
 
 In this session we will introduce programming by looking at how data can be manipulated, counted, and mined using the Unix shell, a command line interface to your computer and the files it has access to.
 
-A Unix shell is a command-line interpreter that provides a user interface for the Linux operating system and for Unix-like systems (such as iOS). For Windows users, popular shells such as Cygwin or Git Bash provide a Unix-like interface (a command line interface preferable to Windows own flavour of command line). This session will cover a small number of basic commands using Git Bash for Windows users, Terminal for iOS. These commands constitute building blocks upon which more complex commands can be constructed to fit your data or project.
+A Unix shell is a command-line interpreter that provides a user interface for the Linux operating system and for Unix-like systems (such as iOS). For Windows users, popular shells such as Cygwin or Git Bash provide a Unix-like interface (a command line interface preferable - to me at least - to Windows own flavour of command line). This session will cover a small number of basic commands using Git Bash for Windows users, Terminal for iOS. These commands constitute building blocks upon which more complex commands can be constructed to fit your data or project.
 
 **SLIDE** The motivations for wanting to learn shell commands are many and various. What you can quickly learn is how to query lots of data for the information you want super fast. Say, for example, you have a query from a reader about the number of articles published in 2009 in academic history journals whose title contains the word 'International'. Now you could search a database. Alternatively you could work directly with the relevant data. The British Library has open data on journal articles, and I've prepared from that...
 
@@ -51,8 +51,8 @@ A Unix shell is a command-line interpreter that provides a user interface for th
 This is simple, powerful, and does what we want. It may seem intimating but, as you'll discover this evening, it is deeply logical and eminently within your reach. Let us go through each part in turn:
 
 - `grep 2009 2014-01_JA.tsv` : this tells the machine to look in the spreadsheet 2014-01_JA.tsv for all the lines that contain the string 2009 and to store those in memory. The pipe then tells the machine to hold those in memory for the minute as we have something else we want to do...
-- `grep INTERNATIONAL` : ...that is look for the capitalised string `international` on those lines that have 2009 in them. The shell is case sensitive by default and I know that in my data most (if not all) occurrences of international in caps will be in a column that lists journal titles. Again it holds this subset in memory and...
-- `awk -F'\t' '{print $5}'` : ...moves on to the next bit. This is the most fiddly of the bits. But all it says is that 2014-01_JA.tsv is a tab separated spreadsheet and to print out to the shell the 5th column (which is the one I know contains journal titles) of all the lines we've queried down to (those with 2009 in them, and then those with INTERNATIONAL in them) and to hold that in memory so that we can then...
+- `grep INTERNATIONAL` : ...that is look for the capitalised string `international` on those lines that have 2009 in them. The shell is case sensitive by default and I know that in my data most (if not all) occurrences of international in caps will be in a column that lists journal titles. Note: this isn't super exact, but I know my data and know it'll do the job of now (think back to the automate vs manual discussion last week). Again it holds this subset in memory and...
+- `awk -F'\t' '{print $5}'` : ...moves on to the next bit. This is the most fiddly of the bits and not something we will cover properly today. But all it says is that 2014-01_JA.tsv is a tab separated spreadsheet and to print out to the shell the 5th column (which is the one I know contains journal titles) of all the lines we've queried down to (those with 2009 in them, and then those with INTERNATIONAL in them) and to hold that in memory so that we can then...
 - `sort` : ...sort that column. `sort` does what is says on the tin, and sorts the data we have left (which should just a single column containing journal titles) holding that sorted list in memory...
 - `uniq -c` : ... so that we can then, finally, tell the machine to remove duplicates but as it is doing so count those duplicates and hold that data in memory.
 
@@ -77,11 +77,11 @@ If you type `ls -l` and hit enter the computer returns a long list of files that
 
 In everyday usage you will be more used to units of measurement like kilobytes, megabytes, and gigabytes. Luckily, there's another flag `-h` that when used with the -l option, use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits to three or less using base 2 for sizes.
 
-Now `ls -h` won't work on its own. When you want to use two flags, you can just run them together. So, by typing `ls -lh` and hitting enter you receive an output in a human-readable format.
+Now `ls -h` won't work on its own. When you want to use two flags, you can just run them together. So, by typing `ls -lh` and hitting enter you receive an output in a human-readable format (note: that the order here doesn't matter).
 
 You've now spent a great deal of time in your home directory. Let's go somewhere else. You can do that through the `cd` or Change Directory command. 
 
-If you type `cd desktop` you are now on your desktop. To double check, type `pwd` and you should see something that represents your desktop.
+If you type `cd desktop` you are now on your desktop (note: for Windows users, the case of the file/directory doesn't matter. For Linux users like me, it does, and I believe that is the same for Mac people). To double check, type `pwd` and you should see something that represents your desktop.
 
 You'll note that this only takes you 'down' through your directory structure (as in into more nested directories). If you want to go back, you can type `cd ..`. This moves us 'up' one directory, putting us back where we started. If you ever get completely lost, the command `cd --` will bring you right back to the home directory, right where you started.
 
@@ -116,7 +116,7 @@ Navigate to the `text` directory in the pre-circulated data directory. In here t
 
 You can read the text right here. To try this, type `cat 829-0.txt`. The terminal window erupts and *Gulliver's Travels* cascades by: this is what is known as printing to the shell. And it is great, in theory, but you can't really make any sense of that amount of text. Instead, you may want to just look at the first or the last bit of the file. **TIP: to cancel this print of `829-0.txt`, or indeed any ongoing in the Unix shell, hit `ctrl+c`**
 
-Type `head 829-0.txt` and hit enter. This provides a view of the first ten lines, whereas `tail 829-0.txt` provides a perspective on the last few lines. This is a good way to quickly determine the contents of the file.
+Type `head 829-0.txt` and hit enter. This provides a view of the first ten lines, whereas `tail 829-0.txt` provides a perspective on the last ten lines. This is a good way to quickly determine the contents of the file.
 
 You may also want to change the file name to something more descriptive. You can 'move' it to a new name by using the `mv` or move command. To do this type `mv 829-0.txt gulliver.txt` and hit enter.
 
@@ -128,9 +128,7 @@ After having read and renamed several files, you may wish to bring their text to
 
 To combine, or concatenate, two or more files use the `cat` command again. Type `cat gulliver.txt gulliver-backup.txt` and press enter. This prints, or displays, the combined files within the shell. However, it is too long to read on this window! Luckily, by using the `>` redirector, you can send the output to a new file, rather than the terminal window. Hit up to get to your last command and amend the line to `cat gulliver.txt gulliver-backup.txt > gulliver-twice.txt` and hit enter. Now, when you type `ls` you'll see `gulliver-twice.txt` appear in your directory.
 
-When combining more than two files, using a wildcard can help avoid having to write out each filename individually. Again, labour saving! A useful wildcard is , which is a place holder for zero or more characters or numbers. So, if you type `cat *.txt > everything-together.txt` and hit enter, a combination of all the `.txt` files in the current directory are combined in alphabetical order as `everything-together.txt`. This can be very useful if you need to combine a large number of smaller file within a directory so that you can work with them in a text analysis program. Another wildcard worth remembering is `?` which is a place holder for a single character or number. We shall return to shell wildcards later - for now, note they are similar to but not the same as the Regex we saw last week.
-
-Now when you run a `ls` command you will see four files, two of which are the same: `gulliver.txt` and `gulliver-backup.txt`. 
+When combining more than two files, using a wildcard can help avoid having to write out each filename individually. Again, labour saving! A useful wildcard is `*` which is a place holder for zero or more characters or numbers (note: this is slightly different from regex...). So, if you type `cat *.txt > everything-together.txt` and hit enter, a combination of all the `.txt` files in the current directory are combined in alphabetical order as `everything-together.txt`. This can be very useful if you need to combine a large number of smaller file within a directory so that you can work with them in a text analysis program. Another wildcard worth remembering is `?` which is a place holder for a single character or number. We shall return to shell wildcards later - for now, note again that they are similar to but not the same as the Regex we saw last week.
 
 Finally, onto deleting. We won't use the now, but if you do want to delete a file, for whatever reason, the command is `rm`, or remove. **Be careful with the `rm` command**, as you don't want to delete files that you do not mean to. Unlike deleting from within your Graphical User Interface, there is **no** recycling bin or undo options. For that reason, if you are in doubt, you may want to exercise caution or maintain a regular backup of your data.
 
@@ -153,7 +151,7 @@ ______
 ______
 ### Stuff you can use in your practice - Manipulating, counting and mining research data
 
-**SLIDE** Now you can work with the unix shell you can move onto learning how to count and mine data. These are rather simple and are unlikely to revolutionise your work. They are, however, alongside the consistent file structure and naming I touched on last week, the foundation of a more powerful set of commands that can count and mine your data.
+**SLIDE** Now you can work with the unix shell you can move onto learning how to count and mine data. These are rather simple and are unlikely to totally revolutionise your work. They are, however, alongside the consistent file structure and naming I touched on last week, the foundation of a more powerful set of commands that can count and mine your data.
 
 ______
 #### Counting
@@ -164,7 +162,7 @@ In the Unix shell, use the `cd` command to navigate to the directory that contai
 
 Type `ls -lh` and then hit enter. This prints, or displays, a list that includes a file and a subdirectory.
 
-The file in this directory is the dataset `2014-01_JA.tsv` that contains journal article metadata.
+The file in this directory is a zipped up version of the dataset `2014-01_JA.tsv` that contains journal article metadata.
 
 The subdirectory is named `derived_data`. It contains a single text file (to which we shall return) and four .tsv files derived from `2014-01_JA.tsv`. Each of these four includes all data where a keyword such as `africa` or `america` appears in the 'Title' field of `2014-01_JA.tsv`. The `derived_data` directory also includes a subdirectory called `results`.
 
@@ -186,7 +184,7 @@ With these three flags, the most obvious thing we can use `wc` for is to quickly
 
 Can you guess what the line `wc -l 2014-01-31_JA-a*.tsv` will do? Correct! This prints the line counts for `2014-01-31_JA-africa.tsv` and `2014-01-31_JA-america.tsv`, offering a simple means of comparing these two sets of research data. Of course, it may be faster if you only have a handful of files to compare the line count for the two documents in Libre Office Calc, Microsoft Excel, or a similar spreadsheet program. But when wishing to compare the line count for tens, hundreds, or thousands of documents, the Unix shell has a clear speed advantage.
 
-Moreover, as our datasets increase in size you can use the Unix shell to do more than copy these line counts by hand, by the use of print screen, or by copy and paste methods. Using the `>` redirect operator we saw earlier you can export our query results to a new file. Type `wc -l 2014-01-31_JA-a*.tsv > results/DATE_JA-a-wc.txt` and hit enter. This runs the same query as before, but rather than print the results within the Unix shell it saves the results as `DATE_JA_a-wc.txt`. By prefacing this with `results/` the shelll is instructed to save the .txt file to the `results` sub-directory. To check this, navigate to the `results` subdirectory, hit enter, type `ls`, and hit enter again to see this file. Type `head DATE_JA-a-wc.txt` to see the file contents in the shell (as it is 10 lines or fewer in length, all the file contents will be shown here).
+Moreover, as our datasets increase in size you can use the Unix shell to do more than copy these line counts by hand, by the use of print screen, or by copy and paste methods. Using the `>` redirect operator we saw earlier you can export our query results to a new file. Type `wc -l 2014-01-31_JA-a*.tsv > results/DATE_JA-a-wc.txt` (or something like that, the last bit after `results/` could be anything!) and hit enter. This runs the same query as before, but rather than print the results within the Unix shell it saves the results as `DATE_JA_a-wc.txt`. By prefacing this with `results/` the shelll is instructed to save the .txt file to the `results` sub-directory. To check this, navigate to the `results` subdirectory, hit enter, type `ls`, and hit enter again to see this file. Type `head DATE_JA-a-wc.txt` to see the file contents in the shell (as it is 10 lines or fewer in length, all the file contents will be shown here).
 
 ______
 #### Mining
@@ -257,6 +255,10 @@ Within the Unix shell you can now:
 - use - `--file=list.txt` to use the file `list.txt` as the source of strings used in a query
 - combine these commands and flags to build complex queries in a way that suggests the potential for using the Unix shell to count and mine your research data and research projects.
 
+**DATE CAPTURE**
+
+At this point, I'd like you to describe on your sticky note, briefly, a use case for this that might change your practice.
+
 ______
 ## Hour Three
 
@@ -265,14 +267,16 @@ ______
 
 **SLIDE** So far we have looked at how to use the Unix shell to manipulate, count, and mine tabulated data. Most libary data, especially digitised documents used by some of research communities libraries support, is much messier journal article metadata. Nonetheless many of the same techniques can be applied to non-tabulated data, such as free text, we just need to think carefully about what it is we are counting and how we can get the best out of the Unix shell. 
 
-Thankfully there are plenty of scholars out there doing this sort of work and we can borrow what they do as an introduction to working with these more complex files. So for this final exercise we're going to leap forward a little in terms of difficulty to an scenario where we won't learn about everything that is happening in detail or discuss at length each command. We're going to prepare and pull apart a text as though we were doing rigorous digital research, run through a dummy piece of research and manipulate something that works to show the potential of using the Unix shell in research. And where commands we've learnt about are used, I've left some of the figuring out to do to you - so please refer to your notes if you get stuck!
+Thankfully there are plenty of folks out there doing this sort of work and we can borrow what they do as an introduction to working with these more complex files. So for this final exercise we're going to leap forward a little in terms of difficulty to an scenario where we won't learn about everything that is happening in detail or discuss at length each command. We're going to prepare and pull apart a text to show the potential of using the Unix shell in research. And where commands we've learnt about are used, I've left some of the figuring out to do to you - so please refer to your notes if you get stuck!
+
+**NB: leave 10 minutes at the end to go through final bits**
 
 _____
 #### Grabbing a text, cleaning it up
 
 *Work on this exercise with the person next to you*
 
-Head to `...\libcarp-wk2-data\text\`. We're going to work again with the `gulliver.txt` file we saw earlier.
+Head to `.../libcarp-wk2-data/text/`. We're going to work again with the `gulliver.txt` file we saw earlier.
 
 **SHOW THE FILE WITH `less -N gulliver.txt`**
 
@@ -292,7 +296,7 @@ This uses the translate command and a special syntax to remove all punctuation. 
 
 Finally regularise the text by removing all the uppercase lettering. Type `tr [:upper:] [:lower:] < gulliver-noheadfootpunct.txt > gulliver-clean.txt` and hit enter.
 
-Open the `gulliver-clean.txt` in Notepad++ (or a text editor). Note how the text has been transformed ready for analysis.
+Open the `gulliver-clean.txt` in a text editor. Note how the text has been transformed ready for analysis.
 
 ______
 #### Pulling a text apart, counting word frequencies
@@ -305,7 +309,7 @@ This uses the translate command again, this time to translate every blank space 
 
 This isn't much use, so to get a better sense of the data we need to use another new command called `sort`. Type `sort gulliver-linebyline.txt > gulliver-ordered.txt` and hit enter.
 
-This script uses the `sort` command to rearrange the text from its original order into an alphabetical configuration. Open the file in Notepad++ and after scrolling past some blank space you will begin to see some numbers and finally words, or at least lots of copies of 'a'!
+This script uses the `sort` command to rearrange the text from its original order into an alphabetical configuration. Open the file in a text editor and after scrolling past some blank space you will begin to see some numbers and finally words, or at least lots of copies of 'a'!
 
 This is looking more useful, but we can go one step further. Type `uniq -c gulliver-ordered.txt > gulliver-final.txt` and hit enter.
 

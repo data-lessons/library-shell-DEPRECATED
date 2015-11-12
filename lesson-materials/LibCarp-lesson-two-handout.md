@@ -7,7 +7,7 @@ ______
 
 18:30-19:25	Counting and Mining
 
-19:30-20:25	Cleaning and Transforming
+19:30-20:15	Cleaning and Transforming
 
 _____
 ### Basics - navigating the shell
@@ -70,7 +70,7 @@ _____
 - `-c`: displays counts of matches for each file
 - `-i`: match with case insensitivity
 - `-w`: match whole words
-- `-v`: exclude match regular expressions
+- `-v`: exclude match
 - `--file=FILENAME.txt`: use the file `FILENAME.txt` as the source of strings used in query
 
 _____
@@ -97,9 +97,9 @@ ______
 
 **Grabbing a text, cleaning it up**
 
-Head to `c:\users\DSTraining\desktop\119\text\`. You're going to work again with the `gulliver.txt` file we saw earlier.
+Head to `.../libcarp-wk2-data/text`. You're going to work again with the `gulliver.txt` file we saw earlier.
 
-The `sed` command allows you to edit files directly.
+The `sed` command allows you to edit files directly. This can be used to remove all the header and footer information that Project Gutenberg add before and after a text.
 
 Type `sed '9352,9714d' gulliver.txt > gulliver-nofoot.txt` and hit enter.
 
@@ -115,7 +115,7 @@ This uses the translate command and a special syntax to remove all punctuation. 
 
 Finally regularise the text by removing all the uppercase lettering. Type `tr [:upper:] [:lower:] < gulliver-noheadfootpunct.txt > gulliver-clean.txt` and hit enter.
 
-Open the `gulliver-clean.txt` in Notepad++. Note how the text has been transformed ready for analysis.
+Open the `gulliver-clean.txt` in a text editor. Note how the text has been transformed ready for analysis.
 
 **Pulling a text apart, counting word frequencies**
 
@@ -127,7 +127,7 @@ This uses the translate command again, this time to translate every blank space 
 
 This isn't much use, so to get a better sense of the data we need to use another new command called `sort`. Type `sort gulliver-linebyline.txt > gulliver-ordered.txt` and hit enter.
 
-This script uses the `sort` command to rearrange the text from its original order into an alphabetical configuration. Open the file in Notepad++ and after scrolling past some blank space you will begin to see some numbers and finally words, or at least lots of copies of 'a'!
+This script uses the `sort` command to rearrange the text from its original order into an alphabetical configuration. Open the file in a text editor and after scrolling past some blank space you will begin to see some numbers and finally words, or at least lots of copies of 'a'!
 
 This is looking more useful, but you can go one step further. Type `uniq -c gulliver-ordered.txt > gulliver-final.txt` and hit enter.
 
