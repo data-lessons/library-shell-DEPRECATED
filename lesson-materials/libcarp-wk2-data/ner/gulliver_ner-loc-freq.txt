@@ -1,0 +1,84 @@
+     45 England 
+     44 Europe 
+     17 Lilliput 
+     14 Japan 
+     11 Blefuscu 
+      8 Luggnagg 
+      8 London 
+      8 Laputa 
+      8 Lagado 
+      6 Balnibarbi 
+      5 Amsterdam 
+      4 New Holland 
+      4 Lisbon 
+      4 Bristol 
+      4 America 
+      3 Rome 
+      3 Maldonada 
+      3 Madagascar 
+      3 Houyhnhnmland 
+      3 Holland 
+      2 Tribnia 
+      2 Tonquin 
+      2 Providence 
+      2 Portsmouth 
+      2 Nottinghamshire 
+      2 France 
+      2 Dutch 
+      2 California 
+      1 Yahoos 
+      1 Versailles 
+      1 Venice 
+      1 Tramecksan 
+      1 Traldragdubh 
+      1 Teneriffe 
+      1 Surat 
+      1 South Sea 
+      1 Salisbury 
+      1 Redriff 
+      1 Persian 
+      1 Pacific Ocean 
+      1 Oxfordshire 
+      1 Oxford 
+      1 Orange 
+      1 Niagara 
+      1 Newgatestreet 
+      1 Newark 
+      1 Nangasac 
+      1 Molucca Islands 
+      1 Lilliput Brobdingrag 
+      1 LILLIPUT 
+      1 Leeward Islands 
+      1 LAPUTA 
+      1 Kentish 
+      1 Guinea 
+      1 Greenwich 
+      1 Greenland 
+      1 Great Tartary 
+      1 Great Britain 
+      1 Glumdalclitch 
+      1 Glubbdubdrib 
+      1 Gelderland 
+      1 Frozen Sea 
+      1 Flanflasnic 
+      1 European 
+      1 Epping 
+      1 East Indies 
+      1 Dunstable 
+      1 DUBLIN 
+      1 Descartes 
+      1 Deptford 
+      1 Christendom 
+      1 Cape of Good Hope 
+      1 Cape 
+      1 Campechy 
+      1 Cambridge 
+      1 Burgundy 
+      1 Brutus 
+      1 Blefusca 
+      1 Belfaborac 
+      1 Barbadoes 
+      1 Banbury 
+      1 Arbela 
+      1 Actium 
+      1 454a Britannia 

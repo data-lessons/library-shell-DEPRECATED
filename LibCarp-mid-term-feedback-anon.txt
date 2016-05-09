@@ -1,0 +1,27 @@
+I have used sed + regex for a personal project but not for work
+Converting or making bulk uploads to catalogue records in MARC format
+Bash. Unix Shell. Ability to combine large documents and search across them
+To quickly locate all files which mention a specific journal title
+Use regular expressions to help create review files of metadata
+Text Mining for digitisation projects. Potentially automating processes appropriate. Understanding arguments / possibilities for software enhancements.
+Getting to know the data part of the challenge. Will prob need to build on knowledge picked up here, but now I know where to start!!!
+Comparing e-book data (ie cat records) with physical records. Overlaps? Gaps? Subject havy in one or other?
+Nothing concrete yet though I felt last week there definitely be practical applications (thinking cap on!)
+Tidying up large downloads of data from the LMS to track missing items with holds on them
+*Possibly* combine two csv files (never borrowed + never browsed). Sort in way that removes duplicates (possibly by book barcode number?)
+Would need a lot of practice and building up to it... but - batch editing - simple algorithms for doing small but significant change to huge datasets. BUT MOSTLY - talking to the Tech people in clearer, more useful ways
+Input into Internal Training Programme + capacity building
+Find all VERSIONS of a word (misspelt due to dyslexia) within a database
+For searching files that I have inherited from someone else.
+Use grep to compare 2 large spreadsheets (one with 1,000 lines and one with 800,000 lines). Currently do it with excel macros but would be quicker with grep.
+Reformatting shelfmarks (title, author, etc) in an exported database of item/bib records. Quite possibly in transforming data to different systems eg. alt LMS etc.
+Using Git bash/Unix shell to query data obtained from a project
+Helps me to understand how researchers using our data might handle it
+Cleaning up data after exporting it from a) LMS b) Institutional Repository. Organising shared file system.
+1-2-1 sessions with PGRs or PGs, signposting them to these tools that will make their research easier. Naming things more usefully + querying w/ regular expressions
+Problem of pulling raw data from LMS!
+Getting relevant titles out of a large spreadsheet to support my departments
+Data/text mining. System admin. Systems design. Extract. Working w. marc files. Datasets.
+Possibly pulling lines out of a horrid csv file our open access system produces. Would like to pick some columns and create the nice tidy spreadsheet I had before automation
+I work training people in digital preservation. 1) Given me confidence, reminded me what I know / can learn so I can make online 'sand box' environment to test tools & share courses. 2) Inspired to try and organise 'Archives Carpentry' 3) loads of ideas and skills for new training material :)
+I'm hoping to mine metadata from our repository and see research trends at Imperial. I would like to take LMS data (ALMA > good luck) and clean it with Open Refine
