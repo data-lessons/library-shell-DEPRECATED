@@ -208,6 +208,8 @@ Finally, you can use the regular expression syntax covered [last week!](https://
 - frence
 - franch
 
+**Tip:** include the `-o` flag to print only the matching part of the lines e.g. `grep -iwo revolution *.tsv` or `grep -iwo --file=gallic.txt *.tsv` (handy for isolating/checking results).
+
 ______
 #### Exercise
 
