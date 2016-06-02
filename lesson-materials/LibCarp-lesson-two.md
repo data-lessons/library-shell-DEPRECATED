@@ -118,6 +118,8 @@ You can read the text right here. To try this, type `cat 829-0.txt`. The termina
 
 Type `head 829-0.txt` and hit enter. This provides a view of the first ten lines, whereas `tail 829-0.txt` provides a perspective on the last ten lines. This is a good way to quickly determine the contents of the file.
 
+Another way to navigate files is to view the contents one screen at a time. Type `less 829-0.txt` to see the first screen, `spacebar` to see the next screen and so on, then `q` to quit (return to the command prompt).
+
 You may also want to change the file name to something more descriptive. You can 'move' it to a new name by using the `mv` or move command. To do this type `mv 829-0.txt gulliver.txt` and hit enter.
 
 Afterwards, when you perform a `ls` command, you will see that it is now `gulliver.txt`. Had you wanted to duplicate it, you could have used the `cp` or copy command by typing `cp 829-0.txt gulliver.txt`
