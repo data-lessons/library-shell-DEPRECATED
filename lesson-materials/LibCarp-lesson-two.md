@@ -89,6 +89,8 @@ Try exploring: move around the computer, get used to moving in and out of direct
 
 Being able to navigate your file system using the bash shell is very important for using the Unix shell effectively. And as you become more comfortable, you'll soon find yourself skipping directly to the directory that you want.
 
+**TIP:** Use the `man` command to invoke the manual page (documentation) for a Shell command. For example, `man ls` displays all the flags/options available to you - which saves you remembering them all! Try this for each command you've learned so far. Use the `spacebar` to navigate the manual pages, and `q` to quit.
+
 _____
 #### Summary
 
@@ -98,6 +100,7 @@ Within the Unix shell you can now:
 - use the command `ls` to list directory contents
 - use flags `-l` and `-lh` to guide the output of the `ls` command
 - use the command `cd` to move around your computer
+- use the `man` command to check the manual page
 
 ______
 ### Basics
