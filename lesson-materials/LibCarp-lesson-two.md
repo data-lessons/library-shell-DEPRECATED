@@ -80,7 +80,9 @@ You've now spent a great deal of time in your home directory. Let's go somewhere
 
 If you type `cd desktop` you are now on your desktop (note: for Windows users, the case of the file/directory doesn't matter. For Linux users like me, it does, and I believe that is the same for Mac people). To double check, type `pwd` and you should see something that represents your desktop.
 
-You'll note that this only takes you 'down' through your directory structure (as in into more nested directories). If you want to go back, you can type `cd ..`. This moves us 'up' one directory, putting us back where we started. If you ever get completely lost, the command `cd --` will bring you right back to the home directory, right where you started.
+You'll note that this only takes you 'down' through your directory structure (as in into more nested directories). If you want to go back, you can type `cd ..`. This moves us 'up' one directory, putting us back where we started. If you ever get completely lost, the command `cd --` (or `cd ~` or even just `cd`) will bring you right back to the home directory, right where you started.
+
+Tip: To switch back and forth between two directories use `cd -`.
 
 Try exploring: move around the computer, get used to moving in and out of directories, see how different file types appear in the Unix shell. **TWO MINUTES**
 
