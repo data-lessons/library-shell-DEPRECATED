@@ -1,11 +1,8 @@
 #Library Carpentry Week Two: Controlling Data (with the Shell)
-
-1730-2030, Monday 16 November, City University London
-
 _____
 ##Lesson Plan
 
-This lesson follows on from '[Week One: Basics](https://github.com/LibraryCarpentry/week-one-library-carpentry)', though there are no pre-requisites in terms of skills or knowledge required to complete this lesson.
+This lesson follows on from '[Week One: Basics](https://github.com/data-lessons/library-data-intro)', though there are no pre-requisites in terms of skills or knowledge required to complete this lesson.
 
 _____
 ### Installation (to be completed before the session)
@@ -20,9 +17,9 @@ Conducted as attendees enter the room
 Thinking about this session on counting and mining using the command line, please rate your skill level. Would you say that you know:
 
 a) Nothing
-b) A Little
+b) A little
 c) Lots
-d) Lots and Lots
+d) Lots and lots
 
 ______
 ## Hour One
@@ -89,7 +86,7 @@ Try exploring: move around the computer, get used to moving in and out of direct
 
 Being able to navigate your file system using the bash shell is very important for using the Unix shell effectively. And as you become more comfortable, you'll soon find yourself skipping directly to the directory that you want.
 
-**TIP:** Use the `man` command to invoke the manual page (documentation) for a Shell command. For example, `man ls` displays all the flags/options available to you - which saves you remembering them all! Try this for each command you've learned so far. Use the `spacebar` to navigate the manual pages, and `q` to quit.
+**TIP:** Use the `man` command to invoke the manual page (documentation) for a Shell command. For example, `man ls` displays all the flags/options available to you - which saves you remembering them all! Try this for each command you've learned so far. Use the `spacebar` to navigate the manual pages, and `q` to quit. *Note:* this command is for Mac and Linux users only. It may not work for Windows users.
 
 _____
 #### Summary
