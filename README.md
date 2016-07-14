@@ -1,3 +1,5 @@
+**NOTE: the master branch is now depreciated. The [gh-pages branch](https://github.com/data-lessons/library-shell/tree/gh-pages) is the default branch for this repo**
+
 ## Library Carpentry. Controlling Data (with the Shell)
 
 This materials is based on the Week 2 Library Carpentry materials.  
