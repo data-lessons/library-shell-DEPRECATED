@@ -1,3 +1,7 @@
+This material has now been moved to the Library Carpentry organisation.
+
+Find it here: https://github.com/LibraryCarpentry/lc-shell
+
 # Library Carpentry
 
 The Library Carpentry module '[Shell Lessons for Librarians](http://data-lessons.github.io/library-shell/)' is maintained by [Belinda Weaver](https://github.com/weaverbel) and [Tim Dennis](https://github.com/jt14den).
